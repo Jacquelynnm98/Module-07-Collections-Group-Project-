@@ -121,6 +121,26 @@ class Program
                 default:
                     Console.WriteLine("Invalid choice. Try again.");
                     break;
+                case "8":
+                    data.Clear();
+                    Console.WriteLine("Dictionary has been cleared.");
+                    if (data.Count == 0)
+                    {
+                        Console.WriteLine("The dictionary is now empty.");
+                    }
+                    break;
+                case "9":
+                    Console.Write("Enter the key to search: ");
+                    string searchKey = Console.ReadLine();
+                    if (data.ContainsKey(searchKey))
+                    {
+                        Console.WriteLine($"Key: {searchKey}, Value: {data[searchKey]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Key not found.");
+                    }
+                    break;
             }
         }
     }
